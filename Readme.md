@@ -7,7 +7,7 @@ Permissions on /etc/shadow should allow only root read and write access.
 Command to inspect permissions:  
 ls -l
 
-![snap_1](./Images/snap_1)
+![snap_1](./Images/snap_1.PNG)
 
 Command to set permissions (if needed): 
 sudo chmod /etc/shadow

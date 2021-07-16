@@ -128,4 +128,4 @@ Provide a report from the chrootkit output on what can be done to harden the sys
 
 Screenshot of end of sample output:
 
-![Snap_17](./Images/snap_A.png)
+![Snap_17](./Images/snap_A.PNG)

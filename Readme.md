@@ -7,12 +7,12 @@ Permissions on /etc/shadow should allow only root read and write access.
 Command to inspect permissions:  
 ls -l
 
-- ![command inspect screenshot](./homework4/snap_1.PNG)
+![snap_1](./Images/snap_1.PNG)
 
 Command to set permissions (if needed): 
-sudo chmod <the file>
+sudo chmod /etc/shadow
 
-- ![command permissions screenshot](./homework4/snap_2.PNG)
+![snape_2](./Images/snap_2.PNG)
 
 Permissions on /etc/gshadow should allow only root read and write access. 
 sudo chmod 700 /etc/gshadow
@@ -27,7 +27,7 @@ sudo chmod 744 /etc/passwd
 Command to inspect permissions: ls -l /etc/passwd
 Command to set permissions (if needed): sudo chmod 744 /etc/passwd
 
-- ![all the users inspect and permissions screenshot](./homework4/snap_3.PNG)
+![snap_3](./Images/snap_3.PNG)
 
 ### Step 2: Create User Accounts
 
@@ -43,18 +43,18 @@ sudo adduser amy
 sudo adduser sara 
 sudo adduser admin
 
-- ![adding users screenshot](./homework4/snap_4.PNG)
+![Snap_4](./Images/snap_4.PNG)
 
-- ![making sure i created all users screenshot](./homework4/snap_x.PNG)
+![snap_X](./Images/snap_x.PNG)
 
 Ensure that only the admin has general sudo access.
 sudo -lU admin
 
-- ![only addmin has sudo access screenshot](./homework4/snap_5.PNG)
+![Snap_5](./Images/snap_5.PNG)
 
 Command to add admin to the sudo group: sudo usermod -aG admin
 
-- ![adding admin to sudo group](./homework4/snap_6.PNG)
+![Snap_6](./Images/snap_6.PNG)
 
 ### Step 3: Create User Group and Collaborative Folder
 
@@ -64,7 +64,7 @@ Command to add group:
 
 sudo addgroup engineers
 
-- ![creating and adding group screenshot](./homework4/snap_7.PNG)
+![Snap_7](./Images/snap_7.PNG)
 
 Add users sam, joe, amy, and sara to the managed group.
 Command to add users to engineers group (include all four users):
@@ -74,58 +74,58 @@ sudo usermod -aG amy
 sudo usermod -aG sara
 sudo usermod _aG admin
 
-- ![adding users to a group screenshot](./homework4/snap_8.PNG)
+![Snap_8](./Images/snap_8.PNG)
 
 Create a shared folder for this group at /home/engineers.
 Command to create the shared folder:
 sudo mkdir group_sharefolder -p /home/engineer
 
-- ![making a sharefolder for my users screenshot](./homework4/snap_9.PNG)
+![Snap_9](./Images/snap_9.PNG)
 
 Change ownership on the new engineers' shared folder to the engineers group.
 Command to change ownership of engineer's shared folder to engineer group:
 
 sudo chgrp engineers groups_sharefolder
 
-- ![changing ownership command screenshot](./homework4/snap_10.PNG)
+![Snap_10](./Images/snap_10.PNG)
 
 ### Step 4: Lynis Auditing
 
 Command to install Lynis: 
 sudo apt install lynis
 
-- ![installing lynis screenshot](./homework4/snap_11.PNG)
+![Snap_11](./Images/snap_11.PNG)
 
 Command to see documentation and instructions: 
 man lynis
 
-- ![lynis documentation and instructions screenshot](./homework4/snap_12.PNG)
+![Snap_12](./Images/snap_12.PNG)
 
 Command to run an audit: 
 sudo lynis audit system
 
-- ![lynis running audit screenshot](./homework4/snap_13.PNG)
+![Snapes_13](./Images/snap_13.PNG)
 
 Provide a report from the Lynis output on what can be done to harden the system.
 
 Screenshot of report output:
 
-- ![lynis output report screenshot](./homework4/snap_14.PNG)
+![Snap_14](./Images/snap_14.PNG)
 
 ### Bonus
 
 Command to install chkrootkit:
 sudo apt-get chkrootkit
 
-- ![installing chkrootkit screenshot](./homework4/snap_15.PNG)
+![Snap_15](./Images/snap_15.PNG)
 
 Command to see documentation and instructions: man chkrootkit
 Command to run expert mode: sudo chkrootkit -x
 
-- ![chkrootkit documentation and instructions screenshot](./homework4/snap_16.PNG)
+![Snap_16](./Images/snap_16.PNG)
 
 Provide a report from the chrootkit output on what can be done to harden the system.
 
 Screenshot of end of sample output:
 
-- ![output of chkrootkit screenshot](./homework4/snap_17.PNG)
+![Snap_17](./Images/snap_17.PNG)
